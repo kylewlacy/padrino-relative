@@ -1,20 +1,24 @@
 Padrino-Relative
 ===============
-This is a simple gem, extracted from [this pull request](https://github.com/padrino/padrino-framework/pull/955). It monkey patches some Padrino class to work, so there's no need for some `helper` or `register` method call. Having `helper` or `register` support would be nice, though. Nicer than simply monkey patching Padrino, anyway.
+This is a simple gem, extracted from [this pull request](https://github.com/padrino/padrino-framework/pull/955). Uses `register`, so you can easily toggle it on a per-app basis. Nice and simple.
 
 Installation
 -----
-Just add the following to your `Gemfile`:
+Add the following to your `Gemfile`:
 
     gem 'padrino-relative'
 
-Then just `bundle install`. Done.
+`bundle install`, and add the following to your `app/app.rb` file:
+
+    register Padrino::Relative
+
+Done.
 
 Usage
 -----
 Try this without the gem installed:
 
-    MyApp.controllers :users do
+    MyApp.controller :users do
         get :sign_up, '/sign_up' do
             'sign up page'
         end
@@ -50,7 +54,7 @@ I want the `:list` route to end up on `/users`, so I change that block to the fo
         'listing all users'
     end
 
-Install the gem, `bundle install`, and `padrino rake routes`. We get the following:
+Install and setup the gem, run `padrino rake routes` again, and I get the following:
 
     # $ padrino rake routes
     => Executing Rake routes ...
