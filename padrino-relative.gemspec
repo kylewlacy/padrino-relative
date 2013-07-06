@@ -9,7 +9,7 @@ Gem::Specification.new do |gem|
   gem.authors     = ['Kyle Lacy']
   gem.email       = 'kylelacy@me.com'
   gem.files       = ['lib/padrino-relative.rb']
-  gem.homepage    = 'http://github.com/kylewlacy/timerizer'
+  gem.homepage    = 'https://github.com/kylewlacy/padrino-relative'
 
   gem.add_dependency('padrino')
 end
