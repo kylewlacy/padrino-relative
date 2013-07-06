@@ -11,5 +11,5 @@ Gem::Specification.new do |gem|
   gem.files       = ['lib/padrino-relative.rb']
   gem.homepage    = 'http://github.com/kylewlacy/timerizer'
 
-  gem.add_dependency('padrino', '~> 0.10.7')
+  gem.add_dependency('padrino')
 end
